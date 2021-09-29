@@ -1,0 +1,26 @@
+<app-navbar></app-navbar>
+<div class="blank-container">
+  <p>.</p>
+</div>
+
+<div class="product-list-container" id="gridCol">
+  <div class="grid-container">
+    <div class="column" *ngFor="let product of productList">
+      <!-- <app-product-item [productItem] = "product"></app-product-item> -->
+      <div
+        class="card"
+        (click)="viewDetail(product)"
+        *ngFor="let product of productList | async as products | productFilter:productName:genderName "
+      >
+        <img [src]="product.imageUrl" />
+        <div class="container">
+          <p>
+            {{ product.name }}
+            <br />
+            {{ product.price | currency: "Ks " }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

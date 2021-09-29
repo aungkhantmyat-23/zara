@@ -1,0 +1,13 @@
+<div
+  class="card" 
+  (click)="viewDetail(productItem)"
+>
+  <img [src]="productItem.imageUrl" />
+  <div class="container">
+    <p>
+      {{ productItem.name }}
+      <br />
+      {{ productItem.price | currency: "Ks " }}
+    </p>
+  </div>
+</div>

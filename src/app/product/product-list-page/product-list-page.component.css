@@ -1,0 +1,25 @@
+.blank-container{
+    height: 120px;
+}
+.grid-container{
+    grid-template-columns: 280px 280px 280px 280px;
+    grid-gap: 30px;
+    display: grid;
+    margin-left: 2%;
+    margin-right: 2%;
+    align-items: center;
+   
+}
+
+
+@media only screen and (max-width: 1050px) and (min-height: 1366px) {
+    .grid-container{
+        grid-template-columns: 220px 220px 220px 220px;
+        grid-gap: 30px;
+        display: grid;
+        margin-left: 3%;
+        margin-right: 3%;
+        align-items: center;
+       
+    }
+}
