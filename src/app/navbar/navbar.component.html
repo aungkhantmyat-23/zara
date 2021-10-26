@@ -1,85 +1,201 @@
 <nav>
-    <ul class="nav-links-head">
-        <h1>
-            <i class="fas fa-bars"></i>
-        </h1>
-        <img src="../../assets/images/zara-logo-1.png" alt=""
-        [routerLink]="['/home']" routerLinkActive="router-link-active" >
+  <ul class="nav-links-head">
+    <h1 (click)="openFilter2()">
+      <i class="fas fa-bars"></i>
+    </h1>
+    <img
+      src="../../assets/images/zara-logo-1.png"
+      alt=""
+      [routerLink]="['/home']"
+      routerLinkActive="router-link-active"
+    />
+  </ul>
+  <div>
+    <ul class="nav-links">
+      <li class="search-li" *ngIf="router != '/search-page'" [routerLink]="['/search-page']"
+      routerLinkActive="router-link-active">SEARCH</li>
+      <li class="sm-btn" *ngIf="router != '/home'">VIEW LARGE</li>
+      <li class="sm-btn" *ngIf="router != '/home'" (click)="gridSm()">
+        VIEW SMALL
+      </li>
+      <li class="sm-btn" [routerLink]="['/login']" routerLinkActive="router-link-active" >LOG IN</li>
+      <li class="sm-btn">HELP</li>
+      <li
+        class="sm-btn"
+        [routerLink]="['/cart-page']"
+        routerLinkActive="router-link-active"
+      >
+        CART({{ shoppingCart.totalquantity }})
+      </li>
     </ul>
-    <div>
-        <ul class="nav-links" >
-            <li class="search-li"> SEARCH</li>
-            <li class="sm-btn" *ngIf="router != '/home'" >VIEW LARGE</li>
-            <li class="sm-btn" *ngIf="router != '/home'" (click)="gridSm()">VIEW SMALL</li>
-            <li class="sm-btn">LOG IN</li>
-            <li class="sm-btn">HELP</li>
-            <li class="sm-btn" [routerLink]="['/cart-page']" routerLinkActive="router-link-active">CART(0)</li>
-        </ul>
-        <p class="filter-btn" (click)="openFilter()" *ngIf="router != '/home'" >FILTERS</p>
-    </div>
-   
+    <p class="filter-btn" (click)="openFilter()" *ngIf="router != '/home'">
+      FILTERS
+    </p>
+  </div>
 </nav>
 
-
 <div id="myFilter" class="filter">
-    <a href="javascript:void(0)" class="closebtn" (click)="closeFilter()">CLOSE</a>
-    <p>
-        CHARACTERISTICS
-    </p>
-    <a href="#" class="ph-a">ACCESSORIES</a>
-    <a href="#" class="ph-a">COATS AND JACKETS</a>
-    <a href="#" class="ph-a">HANDBAGS</a>
-    <span id="dots">.</span>
-    <span id="more">
-        <a href="#">JOIN LIFE</a>
-        <a href="#">JACKETS</a>
-        <a href="#">JEANS</a>
-        <a href="#">KNITWEAR</a>
-        <a href="#">OVERSHIRT</a>
-        <a href="#">POLO SHIRT</a>
-        <a href="#">SHIRTS</a>
-        <a href="#">SHOES</a>
-        <a href="#">SUITS</a>
-        <a href="#">SWEATSHIRTS</a>
-        <a href="#">T-SHIRTS</a>
-        <a href="#">TRENCH COATS AND PARKAS</a>
-        <a href="#">TROUSERS</a>
-    </span>
-    <button (click)="viewMore()" id="viewBtn">
-        <h5> +VIEW MORE</h5>
-    </button>
-    <br><br>
-    <p>
-        COLOUR
-    </p>
-    <a href="#">BEIGE</a>
-    <a href="#">BLACK</a>
-    <a href="#">BLUE</a>
-    <span id="dots2">.</span>
-    <span id="more2">
-        <a href="#">BROWN</a>
-        <a href="#">ECRU</a>
-        <a href="#">GREEN</a>
-        <a href="#">GREY</a>
-        <a href="#">METALIC</a>
-        <a href="#">OTHERS</a>
-        <a href="#">PINK</a>
-        <a href="#">PRINTED</a>
-        <a href="#">RED</a>
-        <a href="#">WHITE</a>
-        <a href="#">YELLOW</a>
-    </span>
-    <button (click)="viewMore2()" id="viewBtn2">
-        <h5> +VIEW MORE</h5>
-    </button>
-    <br><br>
-    <p>
-        SIZE
-    </p>
-    <a href="#">XXL</a>
-    <a href="#">XL</a>
-    <a href="#">L</a>
-    <a href="#">M</a>
-    <a href="#">S</a>
-    <a href="#">XS</a>
+  <a href="javascript:void(0)" class="closebtn" (click)="closeFilter()"
+    >CLOSE</a
+  >
+  <p>CHARACTERISTICS</p>
+  <a href="#" class="ph-a">ACCESSORIES</a>
+  <a href="#" class="ph-a">COATS AND JACKETS</a>
+  <a href="#" class="ph-a">HANDBAGS</a>
+  <span id="dots">.</span>
+  <span id="more">
+    <a href="#">JOIN LIFE</a>
+    <a href="#">JACKETS</a>
+    <a href="#">JEANS</a>
+    <a href="#">KNITWEAR</a>
+    <a href="#">OVERSHIRT</a>
+    <a href="#">POLO SHIRT</a>
+    <a href="#">SHIRTS</a>
+    <a href="#">SHOES</a>
+    <a href="#">SUITS</a>
+    <a >SWEATSHIRTS</a>
+    <a href="#">T-SHIRTS</a>
+    <a href="#">TRENCH COATS AND PARKAS</a>
+    <a href="#">TROUSERS</a>
+  </span>
+  <button (click)="viewMore()" id="viewBtn">
+    <h5>+VIEW MORE</h5>
+  </button>
+  <br /><br />
+  <p>COLOUR</p>
+  <a href="#">BEIGE</a>
+  <a href="#">BLACK</a>
+  <a href="#">BLUE</a>
+  <span id="dots2">.</span>
+  <span id="more2">
+    <a href="#">BROWN</a>
+    <a href="#">ECRU</a>
+    <a href="#">GREEN</a>
+    <a href="#">GREY</a>
+    <a href="#">METALIC</a>
+    <a href="#">OTHERS</a>
+    <a href="#">PINK</a>
+    <a href="#">PRINTED</a>
+    <a href="#">RED</a>
+    <a href="#">WHITE</a>
+    <a href="#">YELLOW</a>
+  </span>
+  <button (click)="viewMore2()" id="viewBtn2">
+    <h5>+VIEW MORE</h5>
+  </button>
+  <br /><br />
+  <p>SIZE</p>
+  <a href="#">XXL</a>
+  <a href="#">XL</a>
+  <a href="#">L</a>
+  <a href="#">M</a>
+  <a href="#">S</a>
+  <a href="#">XS</a>
+</div>
+
+<div id="myFilter2" class="filter2">
+  <a href="javascript:void(0)" class="closebtn" (click)="closeFilter2()"
+    ><i class="fas fa-times"></i
+  ></a>
+  <button class="menDropdown-btn"> 
+    MEN
+  </button>
+  <div class="menDropdown-container">
+    <p>COLLECTION</p>
+      <a
+        [routerLink]="['/product-list-page']"
+        [queryParams]="{ category: 'Jacket' }"
+        >JACKETS</a
+      >
+      <br />
+      <a
+        [routerLink]="['/product-list-page']"
+        [queryParams]="{ category: 'Overshirt' }"
+        >OVERSHIRT</a
+      >
+      <br />
+      <a href="#">SUITS</a>
+      <br />
+      <a href="#">HOODIES</a>
+      <br />
+      <a
+        [routerLink]="['/product-list-page']"
+        (click)="closeFilter2()"
+        [queryParams]="{gender:'Men', category: 'Sweatshirt' }"
+        >SWEATSHIRTS</a
+      >
+      <br />
+      <a
+        [routerLink]="['/product-list-page']"
+        (click)="closeFilter2()"
+        [queryParams]="{ category: 'T-shirt' }"
+        >T-SHIRT</a
+      >
+      <br />
+      <a href="#">SHIRTS</a>
+      <br />
+      <a href="#">TROUSERS</a>
+      <br />
+      <a href="#">JEANS</a>
+      <br />
+      <a href="#">SHORTS</a>
+      <br />
+      <a href="#">SHOES</a>
   </div>
+
+  <br>
+  <button class="womenDropdown-btn">
+    WOMEN
+  </button>
+  <div class="womenDropdown-container">
+    <p>COLLECTION</p>
+      <a
+        [routerLink]="['/product-list-page']"
+        [queryParams]="{ category: 'Jacket' }"
+        >JACKETS</a
+      >
+      <br />
+      <a
+        [routerLink]="['/product-list-page']"
+        [queryParams]="{ category: 'Overshirt' }"
+        >OVERSHIRT</a
+      >
+      <br />
+      <a href="#">SUITS</a>
+      <br />
+      <a href="#">HOODIES</a>
+      <br />
+      <a
+        [routerLink]="['/product-list-page']"
+        (click)="closeFilter2()"
+        [queryParams]="{ category: 'Sweatshirt' }"
+        >SWEATSHIRTS</a
+      >
+      <br />
+      <a
+        [routerLink]="['/product-list-page']"
+        (click)="closeFilter2()"
+        [queryParams]="{ category: 'T-shirt' }"
+        >T-SHIRT</a
+      >
+      <br />
+      <a href="#">SHIRTS</a>
+      <br />
+      <a href="#">TROUSERS</a>
+      <br />
+      <a href="#">JEANS</a>
+      <br />
+      <a href="#">SHORTS</a>
+      <br />
+      <a href="#">SHOES</a>
+  </div>
+
+  <br>
+  <button > 
+    JOIN LIFE
+  </button>
+  <br>
+  <button>
+    + INFO
+  </button>
+</div>

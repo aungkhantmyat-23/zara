@@ -112,4 +112,12 @@ export class ProductService {
   getProducts(): Product[] {
     return this.products;
   }
+
+  findByName(name:string){
+    return this.products.filter(p => 
+        p.name.toUpperCase().includes(
+          name.toUpperCase()
+        )
+      )
+  }
 }

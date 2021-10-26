@@ -1,0 +1,81 @@
+<app-navbar></app-navbar>
+<div class="blank-container">
+    <p>.</p>
+</div>
+<div class="main-container">
+  <div class="login-container">
+    <div class="card login-card">
+      <h3>LOG IN</h3>
+      <form #loginForm="ngForm" (ngSubmit)="loginForm.valid && login()">
+        <div class="user-input-wrp email-input-wrp form-group">
+          <br />
+          <input
+            type="email"
+            class="inputText email-input form-control"
+            name="email"
+            id="email"
+            [ngClass]="{ 'is-invalid': email.touched && email.invalid }"
+            [(ngModel)]="model.email"
+            #email="ngModel"
+            required
+          />
+          <span class="floating-label">E-MAIL ADDRESS</span>
+          <p class="hint-email">
+            <i class="fas fa-exclamation-circle"></i> Enter your e-mail address.
+          </p>
+          <div
+            class="alert"
+            *ngIf="email.invalid && (email.dirty || email.touched)"
+          >
+            <p
+              class="required-warning invalid-feedback"
+              *ngIf="email.errors?.required"
+            >
+              <i class="fas fa-exclamation-circle"></i> Required field
+            </p>
+          </div>
+        </div>
+        <div class="user-input-wrp password-input-wrp form-group">
+          <br />
+          <input
+            type="password"
+            name="password"
+            class="inputText form-control"
+            id="password"
+            [ngClass]="{ 'is-invalid': password.touched && password.invalid }"
+            [(ngModel)]="model.password"
+            #password="ngModel"
+            required
+          />
+          <span class="floating-label">PASSWORD</span>
+          <div
+            class="alert"
+            *ngIf="password.invalid && (password.dirty || password.touched)"
+          >
+            <p
+              class="required-warning invalid-feedback"
+              *ngIf="password.errors?.required"
+            >
+              <i class="fas fa-exclamation-circle"></i> Required field
+            </p>
+          </div>
+        </div>
+      </form>
+
+      <p>HAVE YOU FORGOTTEN YOUR PASSWORD?</p>
+      <button [disabled]="loginForm.invalid">LOG IN</button>
+    </div>
+    <div class="card reqister-card">
+      <h3>REGISTER</h3>
+      <p>
+        IF YOU STILL DON'T HAVE A ZARA.COM ACCOUNT, USE THIS OPTION TO ACCESS
+        THE REGISTRATION FORM.
+        <br /><br />
+        BY GIVING US YOUR DETAILS, PURCHASING IN ZARA.COM WILL BE FASTER AND AN
+        ENJOYABLE EXPERIENCE.
+      </p>
+      <br /><br />
+      <button [routerLink]="['/signup']" routerLinkActive="router-link-active" >CREATE ACCOUNT</button>
+    </div>
+  </div>
+</div>

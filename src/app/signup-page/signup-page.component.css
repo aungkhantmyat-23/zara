@@ -1,26 +1,29 @@
-
+.blank-container{
+  height: 120px;
+}
 .container{
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
-  height: 100vh;
-  
-}
-::-webkit-scrollbar {
-  width: 1px; 
-  background: transparent; 
-}
-::-webkit-scrollbar-thumb {
-  background: black; 
-}
-section{
-  height: 100vh;
-  display: flex;
-  scroll-snap-align: center;
   width: 100%;
 }
-.two .container{
-  margin-left: 15%;
-  margin-top: 20%;
+.card{
+  margin-left: 50%;
+  transform: translateX(-50%);
+  width: 250px;
+  margin-top: 50px;
+}
+
+.card h3{
+  text-align: center;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 600;
+}
+form{
+  margin-bottom: 30px;
+}
+input {
+  height: 20px;
+  border: 0;
+  width: 250px;
+  border-bottom: 1px solid rgb(189, 186, 186);
 }
 
 .user-input-wrp {
@@ -77,21 +80,13 @@ section{
   font-size: 9px;
   font-family: "Roboto Condensed", sans-serif;
 }
-.grid-container{
-  display: flex;
-  margin-bottom: 60px;
-}
-.grid-container p{
-  margin-right: 40px;
-  font-size: 11px;
-  cursor: pointer;
-}
-
-
-
-@media only screen and (max-width: 1050px) and (min-height: 1366px) {
-  .two .container{
-    margin-top: 60%;
-    margin-left: 15%;
-  }
+button {
+  font-family: "Roboto Condensed", sans-serif;
+  border: 1px solid black;
+  background-color: black;
+  color: white;
+  width: 250px;
+  height: 35px;
+  font-size: 12px;
+  text-align: center;
 }

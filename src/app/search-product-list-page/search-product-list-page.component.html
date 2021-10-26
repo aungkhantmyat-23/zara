@@ -2,7 +2,25 @@
 <div class="blank-container">
   <p>.</p>
 </div>
+<div class="search-container">
+  <input
+    type="text"
+    id="fname"
+    name="fname"
+    (keyup.enter)="productName=input.value"
+    #input
+    placeholder="ENTER SEARCH TERMS"
+    oninput="this.value = this.value.toUpperCase()"
+  />
+</div>
 
+<br />
+<div class="gender-filter-list">
+  <button class="result-btn">20 RESULTS</button>
+  <button (click)="genderName='Men'">MEN</button>
+  <button (click)="genderName='Women'">WOMEN</button>
+</div>
+<br />
 <div class="product-list-container" id="gridCol">
   <div class="grid-container">
     <div

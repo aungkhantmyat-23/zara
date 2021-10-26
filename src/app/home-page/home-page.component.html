@@ -1,20 +1,26 @@
 <app-navbar></app-navbar>
 <div class="container">
   <section class="one">
-    <div class="carousel" >
+    <div class="carousel">
       <app-home-carousel></app-home-carousel>
     </div>
   </section>
   <section class="two">
     <div class="container">
-      <div class="input-container">
-        <h3>JOIN OUR NEWSLETTER</h3>
+      <h3>JOIN OUR NEWSLETTER</h3>
+      <div class="user-input-wrp email-input-wrp form-group">
+        <br />
         <input
           type="email"
-          id="email"
+          class="inputText email-input form-control"
           name="email"
-          placeholder="ENTER YOUR EMAIL ADDRESS HERE"
+          id="email"
+          required
         />
+        <span class="floating-label">ENTER YOUR E-MAIL ADDRESS HERE</span>
+        <p class="hint-email">
+          <i class="fas fa-exclamation-circle"></i> Enter your e-mail address.
+        </p>
       </div>
       <div class="grid-container">
         <p>INSTAGRAM</p>

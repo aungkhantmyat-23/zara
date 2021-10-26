@@ -1,0 +1,62 @@
+.blank-container {
+  height: 120px;
+}
+.search-container {
+  margin-left: 100px;
+}
+.search-container input {
+  width: 90%;
+  height: 35px;
+  border: 0;
+  border-bottom: 1px solid black;
+  padding-bottom: -10px;
+  font-size: 30px;
+  font-family: "Roboto Condensed", sans-serif;
+}
+.search-container input:focus{
+    outline: none;
+}
+::-webkit-input-placeholder {
+  font-size: 30px;
+  color: black;
+  font-family: "Roboto Condensed", sans-serif;
+}
+.gender-filter-list{
+  display: inline-block;
+  margin-left: 100px;
+  margin-bottom: 50px;
+}
+.gender-filter-list button{
+  border: 0;
+  background-color: white;
+  font-size: 12px;
+}
+.gender-filter-list .result-btn{
+  margin-right: 100px;
+  font-size: 10px;
+  color: gray;
+}
+.gender-filter-list button:active{
+  border-bottom: 1px solid black;
+}
+.grid-container{
+  grid-template-columns: 230px 230px 230px 230px 230px;
+  grid-gap: 15px;
+  display: grid;
+  margin-left: 2%;
+  margin-right: 2%;
+  align-items: center;
+ 
+}
+.card{
+  width: auto;
+}
+.card img{
+  width: 100%;
+}
+
+.card .container p{
+  font-size: 12px;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 600;
+}

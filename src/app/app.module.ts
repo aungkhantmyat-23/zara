@@ -9,7 +9,6 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { LoginComponent } from './login/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatCarouselModule } from '@ngmodule/material-carousel';
@@ -18,13 +17,15 @@ import { ProductListPageComponent } from './product/product-list-page/product-li
 import { ProductSliderComponent } from './product-slider/product-slider.component';
 import { CommonModule } from '@angular/common';
 import { CartPageComponent } from './cart-page/cart-page.component';
+import { SearchProductListPageComponent } from './search-product-list-page/search-product-list-page.component';
+import { LoginPageComponent } from './login-page/login-page.component';
+import { SignupPageComponent } from './signup-page/signup-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     HomePageComponent,
-    LoginComponent,
     HomeCarouselComponent,
     ProductListPageComponent,
     ProductDetailPageComponent,
@@ -32,6 +33,9 @@ import { CartPageComponent } from './cart-page/cart-page.component';
     ProductItemComponent,
     CartPageComponent,
     ProductFilter,
+    SearchProductListPageComponent,
+    LoginPageComponent,
+    SignupPageComponent,
   ],
   imports: [
     BrowserModule,

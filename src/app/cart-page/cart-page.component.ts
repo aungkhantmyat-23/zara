@@ -17,7 +17,19 @@ export class CartPageComponent implements OnInit {
 
   ngOnInit(): void {
     this.cartItems = this.shoppingCart.cartItems
+
+    
+  }
+  changeValue($event, cartItem){
+    console.log($event, cartItem);
   }
   
-  
+  increment(element: any) {
+    console.log(element)
+    element.stepDown();
+  }
+
+  decrement() {
+
+  }
 }

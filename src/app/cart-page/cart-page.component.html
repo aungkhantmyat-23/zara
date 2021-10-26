@@ -14,9 +14,9 @@
                 {{cartItem.size}}
             </p>
             <div class="number-input">
-                <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus">-</button>
-                <input class="quantity" min="1" name="quantity" type="number" [(ngModel)]="cartItem.quantity" >
-                <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus">+</button>
+                <button (click)=" cartItem.quantity= cartItem.quantity - 1" class="minus">-</button>
+                <input class="quantity" min="1" name="quantity" type="number" (onchange)="changeValue($event, cartItem)" >
+                <button (click)="cartItem.quantity= cartItem.quantity + 1" class="plus">+</button>
             </div>
             <p><i class="far fa-trash-alt"></i></p>
         </div>
