@@ -12,13 +12,31 @@
   </ul>
   <div>
     <ul class="nav-links">
-      <li class="search-li" *ngIf="router != '/search-page'" [routerLink]="['/search-page']"
-      routerLinkActive="router-link-active">SEARCH</li>
-      <li class="sm-btn" *ngIf="router != '/home'">VIEW LARGE</li>
-      <li class="sm-btn" *ngIf="router != '/home'" (click)="gridSm()">
-        VIEW SMALL
+      <li
+        class="search-li"
+        *ngIf="router != '/search-page'"
+        [routerLink]="['/search-page']"
+        routerLinkActive="router-link-active"
+      >
+        SEARCH
       </li>
-      <li class="sm-btn" [routerLink]="['/login']" routerLinkActive="router-link-active" >LOG IN</li>
+      <!-- <li class="sm-btn" *ngIf="router != '/home';">
+        VIEW LARGE
+      </li>
+      <li
+        class="sm-btn"
+        *ngIf="router != '/home';"
+        (click)="gridSm()"
+      >
+        VIEW SMALL
+      </li> -->
+      <li
+        class="sm-btn"
+        [routerLink]="['/login']"
+        routerLinkActive="router-link-active"
+      >
+        LOG IN
+      </li>
       <li class="sm-btn">HELP</li>
       <li
         class="sm-btn"
@@ -28,7 +46,7 @@
         CART({{ shoppingCart.totalquantity }})
       </li>
     </ul>
-    <p class="filter-btn" (click)="openFilter()" *ngIf="router != '/home'">
+    <p class="filter-btn" (click)="openFilter()" *ngIf="router != '/home' ">
       FILTERS
     </p>
   </div>
@@ -53,7 +71,7 @@
     <a href="#">SHIRTS</a>
     <a href="#">SHOES</a>
     <a href="#">SUITS</a>
-    <a >SWEATSHIRTS</a>
+    <a>SWEATSHIRTS</a>
     <a href="#">T-SHIRTS</a>
     <a href="#">TRENCH COATS AND PARKAS</a>
     <a href="#">TROUSERS</a>
@@ -97,105 +115,97 @@
   <a href="javascript:void(0)" class="closebtn" (click)="closeFilter2()"
     ><i class="fas fa-times"></i
   ></a>
-  <button class="menDropdown-btn"> 
-    MEN
-  </button>
+  <button class="menDropdown-btn">MEN</button>
   <div class="menDropdown-container">
     <p>COLLECTION</p>
-      <a
-        [routerLink]="['/product-list-page']"
-        [queryParams]="{ category: 'Jacket' }"
-        >JACKETS</a
-      >
-      <br />
-      <a
-        [routerLink]="['/product-list-page']"
-        [queryParams]="{ category: 'Overshirt' }"
-        >OVERSHIRT</a
-      >
-      <br />
-      <a href="#">SUITS</a>
-      <br />
-      <a href="#">HOODIES</a>
-      <br />
-      <a
-        [routerLink]="['/product-list-page']"
-        (click)="closeFilter2()"
-        [queryParams]="{gender:'Men', category: 'Sweatshirt' }"
-        >SWEATSHIRTS</a
-      >
-      <br />
-      <a
-        [routerLink]="['/product-list-page']"
-        (click)="closeFilter2()"
-        [queryParams]="{ category: 'T-shirt' }"
-        >T-SHIRT</a
-      >
-      <br />
-      <a href="#">SHIRTS</a>
-      <br />
-      <a href="#">TROUSERS</a>
-      <br />
-      <a href="#">JEANS</a>
-      <br />
-      <a href="#">SHORTS</a>
-      <br />
-      <a href="#">SHOES</a>
+    <a
+      [routerLink]="['/product-list-page']"
+      [queryParams]="{ category: 'Jacket' }"
+      >JACKETS</a
+    >
+    <br />
+    <a
+      [routerLink]="['/product-list-page']"
+      [queryParams]="{ category: 'Overshirt' }"
+      >OVERSHIRT</a
+    >
+    <br />
+    <a href="#">SUITS</a>
+    <br />
+    <a href="#">HOODIES</a>
+    <br />
+    <a
+      [routerLink]="['/product-list-page']"
+      (click)="closeFilter2()"
+      [queryParams]="{ gender: 'Men', category: 'Sweatshirt' }"
+      >SWEATSHIRTS</a
+    >
+    <br />
+    <a
+      [routerLink]="['/product-list-page']"
+      (click)="closeFilter2()"
+      [queryParams]="{ category: 'T-shirt' }"
+      >T-SHIRT</a
+    >
+    <br />
+    <a href="#">SHIRTS</a>
+    <br />
+    <a href="#">TROUSERS</a>
+    <br />
+    <a href="#">JEANS</a>
+    <br />
+    <a href="#">SHORTS</a>
+    <br />
+    <a href="#">SHOES</a>
   </div>
 
-  <br>
-  <button class="womenDropdown-btn">
-    WOMEN
-  </button>
+  <br />
+  <button class="womenDropdown-btn">WOMEN</button>
   <div class="womenDropdown-container">
     <p>COLLECTION</p>
-      <a
-        [routerLink]="['/product-list-page']"
-        [queryParams]="{ category: 'Jacket' }"
-        >JACKETS</a
-      >
-      <br />
-      <a
-        [routerLink]="['/product-list-page']"
-        [queryParams]="{ category: 'Overshirt' }"
-        >OVERSHIRT</a
-      >
-      <br />
-      <a href="#">SUITS</a>
-      <br />
-      <a href="#">HOODIES</a>
-      <br />
-      <a
-        [routerLink]="['/product-list-page']"
-        (click)="closeFilter2()"
-        [queryParams]="{ category: 'Sweatshirt' }"
-        >SWEATSHIRTS</a
-      >
-      <br />
-      <a
-        [routerLink]="['/product-list-page']"
-        (click)="closeFilter2()"
-        [queryParams]="{ category: 'T-shirt' }"
-        >T-SHIRT</a
-      >
-      <br />
-      <a href="#">SHIRTS</a>
-      <br />
-      <a href="#">TROUSERS</a>
-      <br />
-      <a href="#">JEANS</a>
-      <br />
-      <a href="#">SHORTS</a>
-      <br />
-      <a href="#">SHOES</a>
+    <a
+      [routerLink]="['/product-list-page']"
+      [queryParams]="{ category: 'Jacket' }"
+      >JACKETS</a
+    >
+    <br />
+    <a
+      [routerLink]="['/product-list-page']"
+      [queryParams]="{ category: 'Overshirt' }"
+      >OVERSHIRT</a
+    >
+    <br />
+    <a href="#">SUITS</a>
+    <br />
+    <a href="#">HOODIES</a>
+    <br />
+    <a
+      [routerLink]="['/product-list-page']"
+      (click)="closeFilter2()"
+      [queryParams]="{ category: 'Sweatshirt' }"
+      >SWEATSHIRTS</a
+    >
+    <br />
+    <a
+      [routerLink]="['/product-list-page']"
+      (click)="closeFilter2()"
+      [queryParams]="{ category: 'T-shirt' }"
+      >T-SHIRT</a
+    >
+    <br />
+    <a href="#">SHIRTS</a>
+    <br />
+    <a href="#">TROUSERS</a>
+    <br />
+    <a href="#">JEANS</a>
+    <br />
+    <a href="#">SHORTS</a>
+    <br />
+    <a href="#">SHOES</a>
   </div>
 
-  <br>
-  <button > 
-    JOIN LIFE
-  </button>
-  <br>
-  <button>
-    + INFO
-  </button>
+  <br />
+  <button>JOIN LIFE</button>
+  <br />
+  <button>+ INFO</button>
 </div>

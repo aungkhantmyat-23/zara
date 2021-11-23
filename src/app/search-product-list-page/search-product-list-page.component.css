@@ -13,50 +13,63 @@
   font-size: 30px;
   font-family: "Roboto Condensed", sans-serif;
 }
-.search-container input:focus{
-    outline: none;
+.search-container input:focus {
+  outline: none;
 }
 ::-webkit-input-placeholder {
   font-size: 30px;
   color: black;
   font-family: "Roboto Condensed", sans-serif;
 }
-.gender-filter-list{
+.gender-filter-list {
   display: inline-block;
   margin-left: 100px;
   margin-bottom: 50px;
 }
-.gender-filter-list button{
+.gender-filter-list button {
   border: 0;
   background-color: white;
   font-size: 12px;
 }
-.gender-filter-list .result-btn{
+.gender-filter-list .result-btn {
   margin-right: 100px;
   font-size: 10px;
   color: gray;
 }
-.gender-filter-list button:active{
+.gender-filter-list button:active {
   border-bottom: 1px solid black;
 }
-.grid-container{
+.grid-container {
   grid-template-columns: 230px 230px 230px 230px 230px;
   grid-gap: 15px;
   display: grid;
   margin-left: 2%;
   margin-right: 2%;
   align-items: center;
- 
 }
-.card{
+.card {
   width: auto;
 }
-.card img{
+.card img {
   width: 100%;
 }
 
-.card .container p{
+.card .container p {
   font-size: 12px;
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
   font-weight: 600;
+}
+
+@media only screen and (max-width: 1050px) {
+  .blank-container {
+    height: 160px;
+  }
+  .grid-container {
+    grid-template-columns: 220px 220px 220px 220px;
+    grid-gap: 30px;
+    display: grid;
+    margin-left: 2%;
+    margin-right: 2%;
+    align-items: center;
+  }
 }

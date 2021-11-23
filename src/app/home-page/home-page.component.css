@@ -1,24 +1,22 @@
-
-.container{
+.container {
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
   height: 100vh;
-  
 }
 ::-webkit-scrollbar {
-  width: 1px; 
-  background: transparent; 
+  width: 1px;
+  background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: black; 
+  background: black;
 }
-section{
+section {
   height: 100vh;
   display: flex;
   scroll-snap-align: center;
   width: 100%;
 }
-.two .container{
+.two .container {
   margin-left: 15%;
   margin-top: 20%;
 }
@@ -77,20 +75,23 @@ section{
   font-size: 9px;
   font-family: "Roboto Condensed", sans-serif;
 }
-.grid-container{
+.grid-container {
   display: flex;
   margin-bottom: 60px;
 }
-.grid-container p{
+.grid-container p {
   margin-right: 40px;
   font-size: 11px;
   cursor: pointer;
 }
 
-
-
+@media only screen and (max-width: 1050px) {
+  .carousel {
+    overflow: hidden;
+  }
+}
 @media only screen and (max-width: 1050px) and (min-height: 1366px) {
-  .two .container{
+  .two .container {
     margin-top: 60%;
     margin-left: 15%;
   }

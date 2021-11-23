@@ -14,6 +14,10 @@ export class NavbarComponent implements OnInit {
   }
 
   ngOnInit(): void {
+
+
+
+
     var menDropdown = document.getElementsByClassName('menDropdown-btn');
     var womenDropdown = document.getElementsByClassName('womenDropdown-btn');
     var i;

@@ -1,3 +1,4 @@
+import { Product } from './../models/product';
 import { ShoppingCart } from './../models/shoppingcart';
 import { Router } from '@angular/router';
 import { CartItems } from './../models/cartItems';
@@ -17,11 +18,9 @@ export class CartPageComponent implements OnInit {
 
   ngOnInit(): void {
     this.cartItems = this.shoppingCart.cartItems
-
-    
   }
-  changeValue($event, cartItem){
-    console.log($event, cartItem);
+  addProductToCart(product:Product){
+    
   }
   
   increment(element: any) {

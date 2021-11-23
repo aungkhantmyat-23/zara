@@ -20,6 +20,7 @@ import { CartPageComponent } from './cart-page/cart-page.component';
 import { SearchProductListPageComponent } from './search-product-list-page/search-product-list-page.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { SignupPageComponent } from './signup-page/signup-page.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { SignupPageComponent } from './signup-page/signup-page.component';
     SearchProductListPageComponent,
     LoginPageComponent,
     SignupPageComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

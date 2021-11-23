@@ -194,5 +194,14 @@ button h5 {
   margin-left: 50px;
 }
 
-
+@media only screen and (max-width: 1050px) and (min-height: 1366px) {
+  .nav-links li {
+    font-size: 20px;
+    padding-left: 25px;
+  }
+  .search-li {
+    padding-right: 45px;
+    font-size: 20px;
+  }
+}
 

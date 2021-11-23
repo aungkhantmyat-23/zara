@@ -1,29 +1,29 @@
-.blank-container{
+.blank-container {
   height: 120px;
 }
-.cartItem-container{
+.cartItem-container {
   margin-left: 100px;
   margin-right: 100px;
   display: grid;
-  grid-template-columns: 50% 50%; 
+  grid-template-columns: 50% 50%;
 }
-.card{
-    display: flex;
-    width: 500px;
-    margin-bottom: 50px;
+.card {
+  display: flex;
+  width: 500px;
+  margin-bottom: 50px;
 }
 img {
   width: 250px;
 }
-.card-text{
+.card-text {
   margin-left: 10px;
 }
-.card-text h5{
+.card-text h5 {
   font-size: 14px;
   font-weight: 600;
   font-family: "Roboto Condensed", sans-serif;
 }
-.card-text p{
+.card-text p {
   font-weight: 600;
   font-size: 13px;
   font-family: "Roboto Condensed", sans-serif;
@@ -34,8 +34,8 @@ input[type="number"] {
   appearance: textfield;
 }
 
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
 }
 
@@ -51,7 +51,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .number-input button {
-  outline:none;
+  outline: none;
   font-weight: lighter;
   font-size: 18px;
   -webkit-appearance: none;
@@ -76,7 +76,7 @@ input[type=number]::-webkit-outer-spin-button {
   transform: translate(-50%, -50%) rotate(0deg);
 }
 
-.number-input input[type=number] {
+.number-input input[type="number"] {
   font-family: "Roboto Condensed", sans-serif;
   max-width: 20px;
   border: 0;
@@ -114,5 +114,25 @@ input[type=number]::-webkit-outer-spin-button {
   width: 200px;
   margin-bottom: 10px;
   font-family: "Roboto Condensed", sans-serif;
+}
 
+@media only screen and (max-width: 1050px) {
+  .cartItem-container {
+    margin-left: 120px;
+  }
+  .card {
+    margin-right: 30px;
+  }
+  .blank-container {
+    height: 160px;
+  }
+  img {
+    width: 280px;
+  }
+  .card-text h5 {
+    font-size: 16px;
+  }
+  .card-text p {
+    font-size: 14px;
+  }
 }

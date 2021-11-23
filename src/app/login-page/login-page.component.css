@@ -1,9 +1,26 @@
-.blank-container{
-  height: 120px;
+
+.container{
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+}
+section {
+  height: 100vh;
+  display: flex;
+  scroll-snap-align: center;
+  width: 100%;
+  overflow-y: hidden;
+}
+::-webkit-scrollbar {
+  width: 1px;
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: black;
 }
 .login-container {
   margin-left: 100px;
-  margin-top: 100px;
+  margin-top: 200px;
   display:  flex;
 }
 .login-container input {
@@ -95,4 +112,22 @@
 .reqister-card{
   margin-left: 200px;
   width: 350px;
+}
+.container-footer{
+  display: none;
+}
+@media only screen and (max-width: 1050px) and (min-height: 1366px) {
+  section {
+    height: 50vh;
+  }
+  .login-container {
+    margin-top: 300px;
+  }
+  .container-footer{
+    display: block;
+    width: 100%;
+  }
+  .two{
+    display: none;
+  }
 }

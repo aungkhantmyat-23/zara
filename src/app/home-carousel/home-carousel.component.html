@@ -1,28 +1,37 @@
-<div class="main-container" >
-    <div class="carousel-container">
-        <button class="btn leftBtn is-hidden">
-          <i class="fas fa-chevron-left"></i> MEN
-        </button>
-        <div class="carouselTrack-container"  routerLinkActive="router-link-active" >
-          <ul class="carouselTrack" id="carouselTrack">
-            <li class="carouselSlide currentSlide" >
-              <div class="card" [routerLink]="['/product-list-page']"
-                [queryParams]="{gender:'Men'}">
-                <img src="../../assets/images/adrian-swancar-obhFyfQdyc0-unsplash.jpg" alt="">
-                <p>INTRODUCING THE FALL/WINTER 2021 COLLECTION</p>
-              </div>
-            </li>
-            <li class="carouselSlide">
-              <div class="card" [routerLink]="['/product-list-page']" routerLinkActive="router-link-active" 
-                [queryParams]="{gender:'Women'}">
-                <img src="../../assets/images/isco--UfV80lOCqg-unsplash.jpg" alt="">
-                <p>INTRODUCING THE FALL/WINTER 2021 COLLECTION</p>
-              </div>
-            </li>
-          </ul>
-        </div>
-        <button class="btn rightBtn">
-          WOMEN <i class="fas fa-chevron-right"></i>
-        </button>
-      </div>
+<div class="main-container">
+  <div class="carousel-container">
+    <button class="btn leftBtn is-hidden">
+      <i class="fas fa-chevron-left"></i> MEN
+    </button>
+    <div class="carouselTrack-container" routerLinkActive="router-link-active">
+      <ul class="carouselTrack" id="carouselTrack">
+        <li class="carouselSlide currentSlide">
+          <div class="card">
+            <img
+              src="../../assets/images/adrian-swancar-obhFyfQdyc0-unsplash.jpg"
+              alt=""
+              [routerLink]="['/product-list-page']"
+              [queryParams]="{ gender: 'Men' }"
+            />
+            <p>INTRODUCING THE FALL/WINTER 2021 COLLECTION</p>
+          </div>
+        </li>
+        <li class="carouselSlide">
+          <div class="card">
+            <img
+              src="../../assets/images/isco--UfV80lOCqg-unsplash.jpg"
+              [routerLink]="['/product-list-page']"
+              routerLinkActive="router-link-active"
+              [queryParams]="{ gender: 'Women' }"
+              alt=""
+            />
+            <p>INTRODUCING THE FALL/WINTER 2021 COLLECTION</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <button class="btn rightBtn">
+      WOMEN <i class="fas fa-chevron-right"></i>
+    </button>
+  </div>
 </div>

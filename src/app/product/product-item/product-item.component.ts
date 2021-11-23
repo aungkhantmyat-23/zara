@@ -5,18 +5,17 @@ import { Component, OnInit, Input } from '@angular/core';
 @Component({
   selector: 'app-product-item',
   templateUrl: './product-item.component.html',
-  styleUrls: ['./product-item.component.css']
+  styleUrls: ['./product-item.component.css'],
 })
 export class ProductItemComponent implements OnInit {
   @Input()
-  productItem:Product;
+  productItem: Product;
 
-  constructor(private router:Router,private route: ActivatedRoute,) { }
+  constructor(private router: Router, private route: ActivatedRoute) {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
-  viewDetail(productItem){
-    this.router.navigate(['/product-detail-page'],{state:productItem})
+  viewDetail(productItem) {
+    this.router.navigate(['/product-detail-page'], { state: productItem });
   }
 }

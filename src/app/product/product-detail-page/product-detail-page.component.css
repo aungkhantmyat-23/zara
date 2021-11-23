@@ -96,10 +96,13 @@ select  option{
   font-size: 12px;
   height: 20px;
 }
-select  :focus{
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
   outline: none !important;
-  border:1px solid red;
 }
+
 select option :hover{
   background-color: aliceblue;
 }
@@ -155,10 +158,31 @@ h2{
   width: 120px;
   font-weight: 600;
 }
+
+
+
+@media only screen and (max-width: 1050px) {
+  .container-2 .section-container img {
+    width: 300px;
+    margin-left: 0px;
+    overflow-x: none;
+  }
+.container-2 .img-list-container {
+  height: 200px;
+  width: 80px;
+}
+.container-2 .img-list-container img {
+  width: 80px;
+  cursor: pointer;
+}
+}
+
+
 @media only screen and (max-width: 1050px) and (min-height: 1366px) {
+  
   .grid-container {
-    grid-template-columns: 65% 35%;
-    padding-top: 12%;
+    grid-template-columns: 67% 33%;
+    padding-top: 15%;
     height: auto;
     margin-bottom: 50px ;
   }
@@ -166,23 +190,42 @@ h2{
     display: none;
   }
   .container-2 {
-    margin-left: 100px;
+    margin-left: 80px;
   }
   .container-2 .section-container img {
     width: 480px;
+    height: 780px;
     margin-left: 0px;
   }
   .section-container {
     width: 500px;
-    height: 800px;
+    height: 790px;
     margin-right: 20px;
   }
   .container-2 .section-container section {
     height: 800px;
   }
   .container-3 {
-    width: 150px;
+    width: 200px;
     margin-left: 100px;
     margin-top: 350px;
+  }
+  .container-3 p {
+    font-size: 13px;
+  }
+  select  option{
+    font-size: 14px;
+    height: 20px;
+  }
+  .container-3 button {
+    width: 100%;
+    text-align: center;
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+    font-size: 14px;
+    height: 34px;
+    margin-bottom: 10px;
+    font-family: "Roboto Condensed", sans-serif;
   }
 }

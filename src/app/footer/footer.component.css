@@ -1,0 +1,19 @@
+.container{
+    width: 100%;
+    display: flex;
+    margin-top: 35%;
+}
+.footer-col{
+    margin-right: 50px;
+}
+.help{
+    margin-left: 100px;
+}
+h5{
+    font-size: 13px;
+    font-weight: 500;
+}
+p{
+    font-size: 10px;
+    font-weight: 500;
+}

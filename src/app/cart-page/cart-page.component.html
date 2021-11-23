@@ -1,34 +1,40 @@
 <app-navbar></app-navbar>
 <div class="blank-container">
-    <p>.</p>
+  <p>.</p>
 </div>
 <div class="cartItem-container">
-    
-
-    <div class="card"  *ngFor="let cartItem of cartItems">
-        <img [src]="cartItem.product.imageUrl" alt="">
-        <div class="card-text">
-            <h5>{{cartItem.product.name}}</h5>
-            <p>{{ cartItem.product.price | currency: "Ks "  }}
-                 <br>
-                {{cartItem.size}}
-            </p>
-            <div class="number-input">
-                <button (click)=" cartItem.quantity= cartItem.quantity - 1" class="minus">-</button>
-                <input class="quantity" min="1" name="quantity" type="number" (onchange)="changeValue($event, cartItem)" >
-                <button (click)="cartItem.quantity= cartItem.quantity + 1" class="plus">+</button>
-            </div>
-            <p><i class="far fa-trash-alt"></i></p>
-        </div>
+  <div class="card" *ngFor="let cartItem of cartItems">
+    <img [src]="cartItem.product.imageUrl" alt="" />
+    <div class="card-text">
+      <h5>{{ cartItem.product.name }}</h5>
+      <p>
+        {{ cartItem.product.price | currency: "Ks " }}
+        <br />
+        {{ cartItem.size }}
+      </p>
+      <div class="number-input">
+        <button
+          (click)="cartItem.quantity = cartItem.quantity - 1"
+          class="minus"
+        >
+          -
+        </button>
+        <input class="quantity" min="1" name="quantity" type="number" [(ngModel)]="cartItem.quantity" />
+        <p (onchange)="changeValue()"></p>
+        <button
+          (click)="cartItem.quantity = cartItem.quantity + 1"
+          class="plus"
+        >
+          +
+        </button>
+      </div>
+      <p><i class="far fa-trash-alt"></i></p>
     </div>
-
-    
+  </div>
 </div>
 <div class="bottom-bar">
-    <div class="container">
-        <p>TOTAL : {{shoppingCart.total}}</p>
-        <button>
-            CONTINUE
-        </button>
-    </div>
+  <div class="container">
+    <p>TOTAL : {{ shoppingCart.total }}</p>
+    <button>CONTINUE</button>
+  </div>
 </div>
